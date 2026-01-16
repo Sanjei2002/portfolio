@@ -62,6 +62,15 @@ export interface Experience {
   description: string;
 }
 
+export interface Project {
+  title: string;
+  description: string;
+  image: string | null;
+  link: string | null;
+  features: string[];
+  technologies: SkillItem[];
+}
+
 export interface Meta {
   siteTitle: string;
   siteDescription: string;
@@ -73,5 +82,6 @@ export interface PortfolioData {
   socials: Socials;
   skills: Skills;
   experience: Experience[];
+  projects: Project[];
   meta: Meta;
 }

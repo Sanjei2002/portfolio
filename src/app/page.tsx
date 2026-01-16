@@ -1,4 +1,4 @@
-import { Mail, MapPin, Github, Linkedin, Twitter, Globe, Braces, Server, Cloud, Code, Database, Terminal, Layers, Cpu, Smartphone } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Twitter, Globe, Braces, Server, Cloud, Code, Database, Terminal, Layers, Cpu, Smartphone, ExternalLink } from "lucide-react";
 import UniverseBackground from "@/components/UniverseBackground";
 import portfolioData from "@/data/info.json";
 import type { PortfolioData, DraculaColor, IconName } from "@/types/portfolio";
@@ -31,7 +31,7 @@ const colorClasses: Record<DraculaColor, { text: string; bg: string; hover: stri
 };
 
 export default function Home() {
-  const { profile, contact, socials, skills, experience } = data;
+  const { profile, contact, socials, skills, experience, projects } = data;
 
   return (
     <>
@@ -153,7 +153,7 @@ export default function Home() {
         </section>
 
         {/* Experience Section */}
-        <section className="p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
+        <section className="mb-16 p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
           <h3 className="text-dracula-fg font-semibold text-lg mb-8">Experience</h3>
 
           <div className="space-y-8">
@@ -168,6 +168,87 @@ export default function Home() {
                 <p className="text-dracula-comment text-sm leading-relaxed">
                   {job.description}
                 </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
+          <h3 className="text-dracula-fg font-semibold text-lg mb-8">Projects</h3>
+          <div className="w-12 h-0.5 bg-dracula-purple -mt-6 mb-8"></div>
+
+          <div className="space-y-12">
+            {projects.map((project, index) => (
+              <div key={index} className="group">
+                {/* Project Card */}
+                <div className="p-6 rounded-lg bg-slate-900/50 border border-slate-800/50 hover:border-dracula-purple/50 transition-all duration-300">
+                  <h4 className="text-dracula-orange font-semibold text-lg mb-4 group-hover:text-dracula-pink transition-colors duration-200">
+                    {project.title}
+                  </h4>
+
+                  <div className="flex flex-col lg:flex-row gap-6">
+                    {/* Project Image */}
+                    {project.image && (
+                      <div className="lg:w-2/5 flex-shrink-0">
+                        <div className="rounded-lg overflow-hidden border border-slate-700/50 shadow-lg">
+                          <img 
+                            src={project.image} 
+                            alt={project.title}
+                            className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Project Details */}
+                    <div className={project.image ? "lg:w-3/5" : "w-full"}>
+                      <p className="text-dracula-fg text-sm leading-relaxed mb-4">
+                        {project.description}
+                      </p>
+
+                      {/* Key Features */}
+                      {project.features.length > 0 && (
+                        <div className="mb-4">
+                          <h5 className="text-dracula-fg font-medium text-sm mb-2">KEY FEATURES</h5>
+                          <ul className="space-y-1">
+                            {project.features.map((feature, i) => (
+                              <li key={i} className="text-dracula-comment text-sm flex items-start gap-2">
+                                <span className="text-dracula-purple mt-1">•</span>
+                                {feature}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {/* Technologies */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech.name}
+                            className={`bg-dracula-current/80 ${colorClasses[tech.color].text} rounded-full px-3 py-1 text-xs ${colorClasses[tech.color].hover} hover:text-dracula-bg transition-all duration-200 cursor-default`}
+                          >
+                            {tech.name}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Project Link */}
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-dracula-current hover:bg-dracula-purple text-dracula-fg text-sm px-4 py-2 rounded-lg transition-all duration-200 group/link"
+                        >
+                          Check it out!
+                          <ExternalLink className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-200" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

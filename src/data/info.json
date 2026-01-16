@@ -66,6 +66,54 @@
       "description": "Built scalable web applications using React and Node.js."
     }
   ],
+  "projects": [
+    {
+      "title": "GoogleOAuth: Full-Stack Google Auth Platform",
+      "description": "GoogleOAuth provides a secure and scalable authentication system with Google login and session management. Built with clean architecture — ideal for apps needing robust auth flows and admin-level control.",
+      "image": "/images/projects/google-oauth.png",
+      "link": "https://github.com/johndoe/google-oauth",
+      "features": [
+        "Secure Google OAuth 2.0 login",
+        "JWT authentication with refresh tokens",
+        "Soft-delete and easy account restore",
+        "Per-device session tracking & logout",
+        "Role-based route access protection",
+        "Admin panel with detailed insights",
+        "Animated & sleek UI with persistent login"
+      ],
+      "technologies": [
+        { "name": "C#", "color": "purple" },
+        { "name": ".NET Web API", "color": "purple" },
+        { "name": "MongoDB", "color": "green" },
+        { "name": "Docker", "color": "cyan" },
+        { "name": "Next.js", "color": "pink" },
+        { "name": "React", "color": "cyan" },
+        { "name": "TypeScript", "color": "cyan" },
+        { "name": "Tailwind CSS", "color": "cyan" }
+      ]
+    },
+    {
+      "title": "DevFlow: Real-time Collaboration Platform",
+      "description": "A real-time collaborative development environment with live code sharing, video calls, and integrated project management for remote engineering teams.",
+      "image": null,
+      "link": "https://github.com/johndoe/devflow",
+      "features": [
+        "Real-time code collaboration with WebSockets",
+        "Integrated video conferencing",
+        "Git integration with PR reviews",
+        "Kanban-style task management",
+        "Team analytics dashboard"
+      ],
+      "technologies": [
+        { "name": "TypeScript", "color": "cyan" },
+        { "name": "Node.js", "color": "green" },
+        { "name": "PostgreSQL", "color": "cyan" },
+        { "name": "Redis", "color": "red" },
+        { "name": "WebRTC", "color": "orange" },
+        { "name": "Docker", "color": "purple" }
+      ]
+    }
+  ],
   "meta": {
     "siteTitle": "John Doe | Portfolio",
     "siteDescription": "Personal portfolio of John Doe - Senior Software Engineer"
