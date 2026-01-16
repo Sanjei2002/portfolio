@@ -70,8 +70,12 @@ Dev_DogTag/
 │   │   ├── globals.css         # Global styles & Tailwind
 │   │   ├── layout.tsx          # Root layout
 │   │   └── page.tsx            # Main portfolio page
-│   └── components/
-│       └── UniverseBackground.tsx  # Galaxy reveal effect
+│   ├── components/
+│   │   └── UniverseBackground.tsx  # Galaxy reveal effect
+│   ├── data/
+│   │   └── info.json           # ⭐ All portfolio content (edit this!)
+│   └── types/
+│       └── portfolio.ts        # TypeScript type definitions
 ├── tailwind.config.ts          # Tailwind with Dracula colors
 ├── next.config.ts              # Next.js configuration
 └── package.json
@@ -81,39 +85,55 @@ Dev_DogTag/
 
 ### Updating Personal Information
 
-Edit `src/app/page.tsx` to update:
-- Name and title
-- Bio/description
-- Contact information (email, location)
-- Social links (GitHub, LinkedIn)
-- Skills and technologies
-- Work experience
+**All content is centralized in `src/data/info.json`**. Edit this single file to update:
 
-### Changing Colors
-
-The Dracula color palette is defined in `tailwind.config.ts`:
-
-```typescript
-colors: {
-  dracula: {
-    bg: '#282a36',
-    current: '#44475a',
-    fg: '#f8f8f2',
-    comment: '#6272a4',
-    cyan: '#8be9fd',
-    green: '#50fa7b',
-    orange: '#ffb86c',
-    pink: '#ff79c6',
-    purple: '#bd93f9',
-    red: '#ff5555',
-    yellow: '#f1fa8c',
+```json
+{
+  "profile": {
+    "initials": "JD",
+    "name": "Your Name",
+    "title": "Your Title",
+    "bio": "Your bio description",
+    "avatarUrl": "/images/avatar.jpg"  // or null for initials
+  },
+  "contact": {
+    "email": "your@email.com",
+    "location": "Your City, Country",
+    "phone": "+1 234 567 890"
+  },
+  "socials": {
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "twitter": "https://twitter.com/yourusername",
+    "website": "https://yourwebsite.com"
+  },
+  "skills": { ... },
+  "experience": [ ... ],
+  "meta": {
+    "siteTitle": "Your Name | Portfolio",
+    "siteDescription": "Your SEO description"
   }
 }
 ```
 
-### Galaxy Background
+### Available Skill Icons
 
-Replace `public/images/galaxy.jpg` with your own space/galaxy image for a different look.
+Use these icon names in your skill categories:
+- `Braces` - Programming languages
+- `Server` - Backend technologies
+- `Cloud` - Cloud services
+- `Code` - General coding
+- `Database` - Databases
+- `Globe` - Web/Frontend
+- `Terminal` - CLI tools
+- `Layers` - Frameworks
+- `Cpu` - System/Hardware
+- `Smartphone` - Mobile
+
+### Available Colors
+
+Use these color names for skills:
+`cyan`, `green`, `orange`, `pink`, `purple`, `red`, `yellow`
 
 ## 🛠 Tech Stack
 

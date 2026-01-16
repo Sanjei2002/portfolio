@@ -1,0 +1,73 @@
+{
+  "profile": {
+    "initials": "JD",
+    "name": "John Doe",
+    "title": "Senior Software Engineer",
+    "bio": "15+ years building scalable systems and leading engineering teams",
+    "avatarUrl": null
+  },
+  "contact": {
+    "email": "john.doe@example.com",
+    "location": "San Francisco, CA",
+    "phone": null
+  },
+  "socials": {
+    "github": "https://github.com/johndoe",
+    "linkedin": "https://linkedin.com/in/johndoe",
+    "twitter": null,
+    "website": null
+  },
+  "skills": {
+    "languages": {
+      "icon": "Braces",
+      "color": "yellow",
+      "items": [
+        { "name": "TypeScript", "color": "cyan" },
+        { "name": "Python", "color": "green" },
+        { "name": "Go", "color": "orange" }
+      ]
+    },
+    "backend": {
+      "icon": "Server",
+      "color": "green",
+      "items": [
+        { "name": "Node.js", "color": "green" },
+        { "name": "PostgreSQL", "color": "cyan" },
+        { "name": "Redis", "color": "red" }
+      ]
+    },
+    "cloud": {
+      "icon": "Cloud",
+      "color": "purple",
+      "items": [
+        { "name": "AWS", "color": "orange" },
+        { "name": "Kubernetes", "color": "cyan" },
+        { "name": "Docker", "color": "purple" }
+      ]
+    }
+  },
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Tech Corp",
+      "period": "2020 - Present",
+      "description": "Led development of microservices architecture. 40% improvement in system performance."
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Innovation Labs",
+      "period": "2017 - 2020",
+      "description": "Architected cloud-native applications, mentored junior developers."
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "StartUp Inc",
+      "period": "2015 - 2017",
+      "description": "Built scalable web applications using React and Node.js."
+    }
+  ],
+  "meta": {
+    "siteTitle": "John Doe | Portfolio",
+    "siteDescription": "Personal portfolio of John Doe - Senior Software Engineer"
+  }
+}

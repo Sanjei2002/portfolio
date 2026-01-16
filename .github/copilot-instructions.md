@@ -43,8 +43,31 @@ Extended with custom Dracula color palette for consistent theming.
 
 ## Common Tasks
 
-### Adding a new skill
-Edit the skills array in `src/app/page.tsx`. Skills are rendered as badge-style tags.
+### Customizing portfolio content
+All personal data is stored in `src/data/info.json`. Edit this file to update:
+- Profile: name, initials, title, bio, avatar URL
+- Contact: email, location, phone
+- Socials: GitHub, LinkedIn, Twitter, website URLs
+- Skills: categories with icons, colors, and skill items
+- Experience: job history with title, company, period, description
+- Meta: site title and description for SEO
+
+### Adding a new skill category
+Edit `src/data/info.json` and add a new category under `skills`:
+```json
+"frontend": {
+  "icon": "Globe",
+  "color": "pink",
+  "items": [
+    { "name": "React", "color": "cyan" },
+    { "name": "Next.js", "color": "purple" }
+  ]
+}
+```
+
+Available icons: `Braces`, `Server`, `Cloud`, `Code`, `Database`, `Globe`, `Terminal`, `Layers`, `Cpu`, `Smartphone`
+
+Available colors: `cyan`, `green`, `orange`, `pink`, `purple`, `red`, `yellow`
 
 ### Modifying the galaxy effect
 Edit `src/components/UniverseBackground.tsx`:

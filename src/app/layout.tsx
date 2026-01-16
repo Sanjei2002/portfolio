@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import portfolioData from "@/data/info.json";
 
 export const metadata: Metadata = {
-  title: "John Doe | Senior Software Engineer",
-  description: "Digital Resume",
+  title: portfolioData.meta.siteTitle,
+  description: portfolioData.meta.siteDescription,
 };
 
 export default function RootLayout({
