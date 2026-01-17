@@ -26,8 +26,8 @@ A modern, interactive personal portfolio website built with Next.js, featuring a
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/Dev_DogTag.git
-   cd Dev_DogTag
+   git clone https://github.com/yourusername/portfolio.git
+   cd portfolio
    ```
 
 2. **Install dependencies**
@@ -61,7 +61,7 @@ npm run lint
 ## 📁 Project Structure
 
 ```
-Dev_DogTag/
+portfolio/
 ├── public/
 │   └── images/
 │       └── galaxy.jpg          # Galaxy background image
@@ -150,7 +150,7 @@ This project is configured for automatic deployment to GitHub Pages.
    - Find the workflow at `.github/workflows/deploy.yml`
 
 3. **Access your site**
-   - Your portfolio will be available at `https://<username>.github.io/Dev_DogTag`
+   - Your portfolio will be available at `https://<username>.github.io/portfolio`
 
 4. **Custom domain (optional)**
    - Add a `CNAME` file to the `public/` folder with your domain

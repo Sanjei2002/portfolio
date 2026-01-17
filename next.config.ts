@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
-const repoName = "Dev_DogTag";
+const repoName = "portfolio";
 
 const nextConfig: NextConfig = {
   output: isProd ? "export" : undefined,

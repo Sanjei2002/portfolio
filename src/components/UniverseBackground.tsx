@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const basePath = process.env.NODE_ENV === "production" ? "/Dev_DogTag" : "";
+const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
 export default function UniverseBackground() {
   const [position, setPosition] = useState({ x: -1000, y: -1000 });

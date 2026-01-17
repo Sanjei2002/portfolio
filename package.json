@@ -2,7 +2,7 @@
   "name": "digital-resume",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/Dev_DogTag",
+  "homepage": "https://yourusername.github.io/portfolio",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
