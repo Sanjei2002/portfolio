@@ -167,5 +167,64 @@
       "Enterprise Software Engineer"
     ],
     "twitterHandle": null
+  },
+  "system": {
+    "version": "v2.3.1",
+    "build": "2026.01.17",
+    "status": "operational",
+    "uptime": "99.9%",
+    "modules": {
+      "systemScope": {
+        "version": "v1.2.0",
+        "status": "online",
+        "subtitle": "Engineering domains and problem space",
+        "description": "The platforms, environments, and system layers I design and operate."
+      },
+      "capabilities": {
+        "version": "v2.1.0",
+        "status": "active",
+        "subtitle": "Languages, frameworks, platforms, and tooling",
+        "description": "The technologies and engineering tools I use to build production-grade Windows applications."
+      },
+      "deploymentHistory": {
+        "version": "v1.5.0",
+        "status": "online",
+        "subtitle": "Professional experience and shipped systems",
+        "description": "A timeline of real-world enterprise systems I have built, shipped, and maintained."
+      },
+      "systemArchitecture": {
+        "version": "v3.0.0",
+        "status": "syncing",
+        "subtitle": "Real-world enterprise systems I've built",
+        "description": "Deep dives into production applications, their architecture, and engineering challenges."
+      }
+    },
+    "telemetry": {
+      "latency": 42,
+      "cacheHitRate": 91,
+      "authStatus": "Valid"
+    },
+    "architecture": {
+      "name": "Trident Mail System",
+      "nodes": [
+        { "id": "mail-ui", "label": "Mail UI", "icon": "Mail", "x": 15, "y": 30, "status": "active", "description": "Primary user interface module" },
+        { "id": "auth", "label": "Auth Service", "icon": "Shield", "x": 50, "y": 15, "status": "active", "description": "OAuth2 + Token Management" },
+        { "id": "sync", "label": "Sync Engine", "icon": "RefreshCw", "x": 50, "y": 45, "status": "processing", "description": "IMAP/SMTP Protocol Handler" },
+        { "id": "cache", "label": "Local Cache", "icon": "Database", "x": 85, "y": 30, "status": "active", "description": "SQLite Offline Storage" },
+        { "id": "notify", "label": "Notifications", "icon": "Bell", "x": 15, "y": 70, "status": "active", "description": "Toast & Badge Updates" },
+        { "id": "background", "label": "Background Tasks", "icon": "Cpu", "x": 50, "y": 75, "status": "idle", "description": "Windows Background Services" },
+        { "id": "cloud", "label": "Cloud APIs", "icon": "Cloud", "x": 85, "y": 70, "status": "active", "description": "REST API Integration" }
+      ],
+      "connections": [
+        { "from": "mail-ui", "to": "auth", "label": "Token Request", "animated": true },
+        { "from": "mail-ui", "to": "sync", "label": "Fetch Mail" },
+        { "from": "auth", "to": "cloud", "label": "OAuth Flow", "animated": true },
+        { "from": "sync", "to": "cache", "label": "Store" },
+        { "from": "sync", "to": "cloud", "label": "IMAP Sync", "animated": true },
+        { "from": "background", "to": "sync", "label": "Scheduled" },
+        { "from": "background", "to": "notify", "label": "Push" },
+        { "from": "cache", "to": "cloud", "label": "Delta Sync" }
+      ]
+    }
   }
 }
