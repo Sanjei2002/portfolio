@@ -14,6 +14,99 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ============================================
+   MOTION LANGUAGE SYSTEM - Spring Animations
+   ============================================ */
+
+/* Spring easing function - cubic-bezier approximation of spring physics */
+:root {
+  --spring-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --spring-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --spring-snappy: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide in from right */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale in with bounce */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.2);
+  }
+}
+
+/* Dash animation for SVG lines */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s var(--spring-smooth) forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s var(--spring-smooth) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s var(--spring-bounce) forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.animate-dash {
+  animation: dash 1s linear infinite;
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 50ms; }
+.stagger-2 { animation-delay: 100ms; }
+.stagger-3 { animation-delay: 150ms; }
+.stagger-4 { animation-delay: 200ms; }
+.stagger-5 { animation-delay: 250ms; }
+.stagger-6 { animation-delay: 300ms; }
+
 /* Theme Variables */
 :root {
   --bg-primary: #050510;
@@ -374,4 +467,202 @@ html.light .hover\:border-dracula-cyan\/50:hover {
 /* Soft inner card styles */
 html.light .group:hover .bg-slate-900\/50 {
   background: rgba(255, 255, 255, 0.95);
+}
+
+/* ============================================
+   SYSTEM UI IDENTITY - Engineering Workstation
+   ============================================ */
+
+/* System Module Styling */
+.system-module {
+  position: relative;
+  border-radius: 16px;
+  transition: all 0.3s var(--spring-smooth);
+}
+
+.system-module:hover {
+  transform: translateY(-2px);
+}
+
+/* Corner markers for system panels */
+.corner-marker {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+}
+
+.corner-marker-tl {
+  top: 0;
+  left: 0;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  border-top-left-radius: inherit;
+}
+
+.corner-marker-tr {
+  top: 0;
+  right: 0;
+  border-right: 2px solid;
+  border-top: 2px solid;
+  border-top-right-radius: inherit;
+}
+
+.corner-marker-bl {
+  bottom: 0;
+  left: 0;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  border-bottom-left-radius: inherit;
+}
+
+.corner-marker-br {
+  bottom: 0;
+  right: 0;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  border-bottom-right-radius: inherit;
+}
+
+/* Status indicator animation */
+@keyframes statusPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+}
+
+.status-pulse {
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+/* Telemetry bar styling */
+.telemetry-bar {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* System overlay backdrop */
+.system-overlay {
+  backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* Blueprint grid animation for light theme */
+@keyframes gridPulse {
+  0%, 100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.08;
+  }
+}
+
+html.light .blueprint-grid {
+  animation: gridPulse 4s ease-in-out infinite;
+}
+
+/* Flow connector styling */
+.flow-connector {
+  position: relative;
+}
+
+.flow-connector::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent-primary),
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+/* Card lift effect on hover */
+.card-lift {
+  transition: transform 0.3s var(--spring-smooth), box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.5);
+}
+
+/* Z-index layering system */
+.z-background { z-index: -30; }
+.z-midground { z-index: -20; }
+.z-foreground { z-index: 10; }
+.z-overlay { z-index: 50; }
+.z-modal { z-index: 100; }
+
+/* Hover glow effects */
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+}
+
+html.light .hover-glow:hover {
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+/* Terminal-style text */
+.terminal-text {
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Fluent motion class */
+.fluent-motion {
+  transition: all 0.2s var(--spring-smooth);
+}
+
+/* Will-change optimization for animated elements */
+.will-animate {
+  will-change: transform, opacity;
+}
+
+/* Prevent layout shift during animations */
+.animate-stable {
+  backface-visibility: hidden;
+  perspective: 1000px;
 }

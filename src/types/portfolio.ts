@@ -89,6 +89,60 @@ export interface Meta {
   twitterHandle: string | null;
 }
 
+export type SystemNodeStatus = "active" | "idle" | "processing";
+export type ModuleStatus = "online" | "active" | "idle" | "syncing";
+
+export interface SystemNode {
+  id: string;
+  label: string;
+  icon: string;
+  x: number;
+  y: number;
+  status: SystemNodeStatus;
+  description: string;
+}
+
+export interface SystemConnection {
+  from: string;
+  to: string;
+  label?: string;
+  animated?: boolean;
+}
+
+export interface ModuleConfig {
+  version: string;
+  status: ModuleStatus;
+  subtitle?: string;
+  description?: string;
+}
+
+export interface SystemTelemetry {
+  latency: number;
+  cacheHitRate: number;
+  authStatus: string;
+}
+
+export interface SystemArchitecture {
+  name: string;
+  nodes: SystemNode[];
+  connections: SystemConnection[];
+}
+
+export interface SystemConfig {
+  version: string;
+  build: string;
+  status: string;
+  uptime: string;
+  modules: {
+    systemScope: ModuleConfig;
+    capabilities: ModuleConfig;
+    deploymentHistory: ModuleConfig;
+    systemArchitecture: ModuleConfig;
+  };
+  telemetry: SystemTelemetry;
+  architecture: SystemArchitecture;
+}
+
 export interface PortfolioData {
   profile: Profile;
   contact: Contact;
@@ -99,4 +153,5 @@ export interface PortfolioData {
   caseStudies?: CaseStudy[];
   projects?: Project[];
   meta: Meta;
+  system?: SystemConfig;
 }

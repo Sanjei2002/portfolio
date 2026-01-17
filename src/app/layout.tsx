@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import portfolioData from "@/data/info.json";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { ViewModeProvider } from "@/components/ViewModeContext";
 
 const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
@@ -85,7 +86,9 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className="text-dracula-fg antialiased overflow-x-hidden">
         <ThemeProvider>
-          {children}
+          <ViewModeProvider>
+            {children}
+          </ViewModeProvider>
         </ThemeProvider>
       </body>
     </html>
