@@ -1,6 +1,6 @@
-# Sanjei Pranav | Windows Desktop Engineer Portfolio
+# Windows Desktop Engineer Portfolio Template
 
-A modern, interactive portfolio website for Windows Desktop Engineers, built with Next.js. Features a stunning mouse-tracking galaxy reveal effect and Dracula color theme. Showcases enterprise Windows application development experience with WinUI 3, UWP, and .NET.
+A modern, interactive portfolio website template built with Next.js. Features a stunning mouse-tracking galaxy reveal effect and Dracula color theme. Perfect for showcasing enterprise Windows application development experience with WinUI 3, UWP, and .NET.
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.1.3-black?logo=next.js)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?logo=tailwind-css)
@@ -24,9 +24,9 @@ A modern, interactive portfolio website for Windows Desktop Engineers, built wit
 
 ### Installation
 
-1. **Clone the repository**
+1. **Clone or fork the repository**
    ```bash
-   git clone https://github.com/Sanjei2002/portfolio.git
+   git clone https://github.com/yourusername/portfolio.git
    cd portfolio
    ```
 
@@ -90,20 +90,20 @@ portfolio/
 ```json
 {
   "profile": {
-    "initials": "SP",
-    "name": "Sanjei Pranav",
-    "title": "Windows Application Engineer | WinUI, UWP, .NET",
-    "bio": "Enterprise Windows application developer...",
+    "initials": "YI",
+    "name": "Your Name",
+    "title": "Your Title | Tech Stack",
+    "bio": "Your professional bio...",
     "avatarUrl": "/images/avatar.jpg"
   },
   "contact": {
-    "email": "s.sanjeipranav@gmail.com",
-    "location": "Chennai, India",
+    "email": "your.email@example.com",
+    "location": "Your City, Country",
     "phone": null
   },
   "socials": {
-    "github": "https://github.com/Sanjei2002",
-    "linkedin": "https://linkedin.com/in/sanjei-pranav-s",
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://www.linkedin.com/in/your-profile",
     "twitter": null,
     "website": null
   },
@@ -112,8 +112,8 @@ portfolio/
   "platformFocus": [ ... ],
   "caseStudies": [ ... ],
   "meta": {
-    "siteTitle": "Sanjei Pranav | Windows Application Engineer",
-    "siteDescription": "Enterprise Windows application developer..."
+    "siteTitle": "Your Name | Your Title",
+    "siteDescription": "Your description..."
   }
 }
 ```
@@ -152,7 +152,8 @@ This project is configured for automatic deployment to GitHub Pages.
    - Find the workflow at `.github/workflows/deploy.yml`
 
 3. **Access your site**
-   - Your portfolio will be available at `https://Sanjei2002.github.io/portfolio`
+   - Your portfolio will be available at `https://yourusername.github.io/portfolio`
+   - Update the repository name in the URL if you renamed it
 
 4. **Custom domain (optional)**
    - Add a `CNAME` file to the `public/` folder with your domain

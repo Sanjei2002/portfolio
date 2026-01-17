@@ -1,170 +1,167 @@
 {
   "profile": {
-    "initials": "SP",
-    "name": "Sanjei Pranav",
-    "title": "Windows Application Engineer | WinUI, UWP, .NET",
-    "bio": "Enterprise Windows application developer with 2.25 years of experience building and maintaining a large-scale corporate email client. Specialized in Windows App SDK, UWP, MVVM architecture, and high-performance desktop systems.",
+    "initials": "YI",
+    "name": "Your Name",
+    "title": "Your Title | Technology Stack",
+    "bio": "Your professional bio describing your experience and expertise. Highlight your specializations and key skills that set you apart.",
     "avatarUrl": "/images/avatar.jpg"
   },
   "contact": {
-    "email": "s.sanjeipranav@gmail.com",
-    "location": "Chennai, India",
+    "email": "your.email@example.com",
+    "location": "Your City, Country",
     "phone": null
   },
   "socials": {
-    "github": "https://github.com/Sanjei2002",
-    "linkedin": "https://www.linkedin.com/in/sanjei-pranav-s",
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://www.linkedin.com/in/your-profile",
     "twitter": null,
     "website": null
   },
   "skills": {
-    "languages": {
+    "categoryName1": {
       "icon": "Braces",
       "color": "yellow",
       "items": [
-        { "name": "C#", "color": "purple" },
-        { "name": "XAML", "color": "cyan" },
-        { "name": "PowerShell", "color": "green" },
-        { "name": "C++", "color": "orange" }
+        { "name": "Your Skill 1", "color": "purple" },
+        { "name": "Your Skill 2", "color": "cyan" },
+        { "name": "Your Skill 3", "color": "green" },
+        { "name": "Your Skill 4", "color": "orange" }
       ]
     },
-    "frameworks": {
+    "categoryName2": {
       "icon": "Layers",
       "color": "purple",
       "items": [
-        { "name": ".NET 8", "color": "purple" },
-        { "name": "Windows App SDK", "color": "cyan" },
-        { "name": "UWP", "color": "cyan" },
-        { "name": "WinUI 3", "color": "pink" },
-        { "name": "WPF", "color": "purple" }
+        { "name": "Your Skill 1", "color": "purple" },
+        { "name": "Your Skill 2", "color": "cyan" },
+        { "name": "Your Skill 3", "color": "cyan" },
+        { "name": "Your Skill 4", "color": "pink" },
+        { "name": "Your Skill 5", "color": "purple" }
       ]
     },
-    "architecture": {
+    "categoryName3": {
       "icon": "Code",
       "color": "pink",
       "items": [
-        { "name": "MVVM", "color": "pink" },
-        { "name": "Clean Architecture", "color": "green" },
-        { "name": "Dependency Injection", "color": "cyan" },
-        { "name": "Modular UI", "color": "purple" },
-        { "name": "Plugin Systems", "color": "orange" }
+        { "name": "Your Skill 1", "color": "pink" },
+        { "name": "Your Skill 2", "color": "green" },
+        { "name": "Your Skill 3", "color": "cyan" },
+        { "name": "Your Skill 4", "color": "purple" },
+        { "name": "Your Skill 5", "color": "orange" }
       ]
     },
-    "platform": {
+    "categoryName4": {
       "icon": "Cpu",
       "color": "cyan",
       "items": [
-        { "name": "MSIX Packaging", "color": "cyan" },
-        { "name": "Windows Services", "color": "green" },
-        { "name": "WinRT", "color": "purple" },
-        { "name": "COM", "color": "orange" },
-        { "name": "Background Tasks", "color": "pink" },
-        { "name": "Toast Notifications", "color": "yellow" },
-        { "name": "Deep Linking", "color": "cyan" },
-        { "name": "App Lifecycle", "color": "green" }
+        { "name": "Your Skill 1", "color": "cyan" },
+        { "name": "Your Skill 2", "color": "green" },
+        { "name": "Your Skill 3", "color": "purple" },
+        { "name": "Your Skill 4", "color": "orange" },
+        { "name": "Your Skill 5", "color": "pink" },
+        { "name": "Your Skill 6", "color": "yellow" },
+        { "name": "Your Skill 7", "color": "cyan" },
+        { "name": "Your Skill 8", "color": "green" }
       ]
     },
-    "networking": {
+    "categoryName5": {
       "icon": "Globe",
       "color": "green",
       "items": [
-        { "name": "IMAP", "color": "cyan" },
-        { "name": "SMTP", "color": "green" },
-        { "name": "POP3", "color": "orange" },
-        { "name": "OAuth2", "color": "pink" },
-        { "name": "REST APIs", "color": "purple" },
-        { "name": "WebSockets", "color": "cyan" }
+        { "name": "Your Skill 1", "color": "cyan" },
+        { "name": "Your Skill 2", "color": "green" },
+        { "name": "Your Skill 3", "color": "orange" },
+        { "name": "Your Skill 4", "color": "pink" },
+        { "name": "Your Skill 5", "color": "purple" },
+        { "name": "Your Skill 6", "color": "cyan" }
       ]
     },
-    "tooling": {
+    "categoryName6": {
       "icon": "Terminal",
       "color": "orange",
       "items": [
-        { "name": "Visual Studio", "color": "purple" },
-        { "name": "WinDbg", "color": "orange" },
-        { "name": "PerfView", "color": "green" },
-        { "name": "ETW Tracing", "color": "cyan" },
-        { "name": "App Center", "color": "pink" },
-        { "name": "Azure DevOps", "color": "cyan" }
+        { "name": "Your Skill 1", "color": "purple" },
+        { "name": "Your Skill 2", "color": "orange" },
+        { "name": "Your Skill 3", "color": "green" },
+        { "name": "Your Skill 4", "color": "cyan" },
+        { "name": "Your Skill 5", "color": "pink" },
+        { "name": "Your Skill 6", "color": "cyan" }
       ]
     }
   },
   "experience": [
     {
-      "title": "Software Engineer – Enterprise Mail Platform",
-      "company": "Trident",
-      "period": "2023 – Present",
+      "title": "Your Job Title",
+      "company": "Your Company Name",
+      "period": "Start Year – End Year (or Present)",
       "description": [
-        "Core developer of a large-scale enterprise email client built using UWP and Windows App SDK",
-        "Designed modular MVVM-based architecture for mailbox, composer, and calendar modules",
-        "Built high-performance IMAP/SMTP sync engine with offline caching",
-        "Implemented OAuth2 authentication with secure token refresh",
-        "Integrated Windows notifications, deep links, and background sync",
-        "Optimized startup performance and UI responsiveness",
-        "Built MSIX packaging and auto-update pipeline",
-        "Implemented telemetry, crash diagnostics, and logging"
+        "Key accomplishment or responsibility #1",
+        "Key accomplishment or responsibility #2",
+        "Key accomplishment or responsibility #3",
+        "Key accomplishment or responsibility #4",
+        "Key accomplishment or responsibility #5",
+        "Key accomplishment or responsibility #6",
+        "Key accomplishment or responsibility #7",
+        "Key accomplishment or responsibility #8"
       ]
     }
   ],
   "platformFocus": [
-    "Windows Desktop Engineering",
-    "Enterprise Application Development",
-    "System Performance Optimization",
-    "Native OS Integration",
-    "Security & Authentication",
-    "Long-Lived Product Architecture"
+    "Your Area of Focus #1",
+    "Your Area of Focus #2",
+    "Your Area of Focus #3",
+    "Your Area of Focus #4",
+    "Your Area of Focus #5",
+    "Your Area of Focus #6"
   ],
   "caseStudies": [
     {
-      "title": "Trident Enterprise Mail Client",
-      "overview": "Enterprise-grade Windows email client for corporate communication with secure auth, offline mode, and native OS integration.",
+      "title": "Your Project Title",
+      "overview": "A brief description of your project, highlighting its purpose, key features, and impact.",
       "image": null,
       "link": null,
       "techStack": [
-        { "name": "C#", "color": "purple" },
-        { "name": ".NET 8", "color": "purple" },
-        { "name": "Windows App SDK", "color": "cyan" },
-        { "name": "UWP", "color": "cyan" },
-        { "name": "MVVM", "color": "pink" },
-        { "name": "OAuth2", "color": "green" },
-        { "name": "IMAP", "color": "orange" },
-        { "name": "SMTP", "color": "orange" },
-        { "name": "MSIX", "color": "cyan" }
+        { "name": "Technology #1", "color": "purple" },
+        { "name": "Technology #2", "color": "purple" },
+        { "name": "Technology #3", "color": "cyan" },
+        { "name": "Technology #4", "color": "cyan" },
+        { "name": "Technology #5", "color": "pink" },
+        { "name": "Technology #6", "color": "green" },
+        { "name": "Technology #7", "color": "orange" },
+        { "name": "Technology #8", "color": "orange" },
+        { "name": "Technology #9", "color": "cyan" }
       ],
       "keySystems": [
-        "Mail sync engine",
-        "Attachment manager",
-        "Offline cache",
-        "Notification service",
-        "Rich-text composer",
-        "Account & mailbox manager"
+        "Key system or feature #1",
+        "Key system or feature #2",
+        "Key system or feature #3",
+        "Key system or feature #4",
+        "Key system or feature #5",
+        "Key system or feature #6"
       ],
       "challenges": [
-        "Large mailbox performance",
-        "Background sync reliability",
-        "Secure credential storage",
-        "Zero-downtime updates",
-        "Crash diagnostics at scale"
+        "Challenge #1 you overcame",
+        "Challenge #2 you overcame",
+        "Challenge #3 you overcame",
+        "Challenge #4 you overcame",
+        "Challenge #5 you overcame"
       ]
     }
   ],
   "meta": {
-    "siteTitle": "Sanjei Pranav | Windows Application Engineer - WinUI, UWP, .NET",
-    "siteDescription": "Sanjei Pranav is an Enterprise Windows Application Engineer specializing in Windows App SDK (WinUI 3), UWP, .NET desktop development, and MVVM architecture. Based in Chennai, India with 2.25+ years of experience building large-scale corporate applications.",
-    "siteUrl": "https://sanjei2002.github.io/portfolio",
+    "siteTitle": "Your Name | Your Professional Title",
+    "siteDescription": "Your professional summary highlighting your expertise, specializations, and experience. This will be used for SEO and social media previews.",
+    "siteUrl": "https://yourusername.github.io/portfolio",
     "keywords": [
-      "Sanjei Pranav",
-      "Sanjei Pranav S",
-      "Windows Application Engineer",
-      "WinUI 3 Developer",
-      "UWP Developer",
-      ".NET Developer",
-      "Windows App SDK",
-      "MVVM",
-      "C# Developer",
-      "Desktop Application Developer",
-      "Chennai Developer",
-      "Enterprise Software Engineer"
+      "Your Name",
+      "Your Professional Title",
+      "Your Key Skill #1",
+      "Your Key Skill #2",
+      "Your Key Skill #3",
+      "Your Key Skill #4",
+      "Your Key Skill #5",
+      "Your Key Skill #6",
+      "Your Location"
     ],
     "twitterHandle": null
   }
