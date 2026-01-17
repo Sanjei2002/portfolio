@@ -18,74 +18,74 @@
     "website": null
   },
   "skills": {
-    "languages": {
+    "categoryName1": {
       "icon": "Braces",
       "color": "yellow",
       "items": [
-        { "name": "C#", "color": "purple" },
-        { "name": "XAML", "color": "cyan" },
-        { "name": "PowerShell", "color": "green" },
-        { "name": "C++", "color": "orange" }
+        { "name": "Your Skill 1", "color": "purple" },
+        { "name": "Your Skill 2", "color": "cyan" },
+        { "name": "Your Skill 3", "color": "green" },
+        { "name": "Your Skill 4", "color": "orange" }
       ]
     },
-    "frameworks": {
+    "categoryName2": {
       "icon": "Layers",
       "color": "purple",
       "items": [
-        { "name": ".NET 8", "color": "purple" },
-        { "name": "Windows App SDK", "color": "cyan" },
-        { "name": "UWP", "color": "cyan" },
-        { "name": "WinUI 3", "color": "pink" },
-        { "name": "WPF", "color": "purple" }
+        { "name": "Your Skill 1", "color": "purple" },
+        { "name": "Your Skill 2", "color": "cyan" },
+        { "name": "Your Skill 3", "color": "cyan" },
+        { "name": "Your Skill 4", "color": "pink" },
+        { "name": "Your Skill 5", "color": "purple" }
       ]
     },
-    "architecture": {
+    "categoryName3": {
       "icon": "Code",
       "color": "pink",
       "items": [
-        { "name": "MVVM", "color": "pink" },
-        { "name": "Clean Architecture", "color": "green" },
-        { "name": "Dependency Injection", "color": "cyan" },
-        { "name": "Modular UI", "color": "purple" },
-        { "name": "Plugin Systems", "color": "orange" }
+        { "name": "Your Skill 1", "color": "pink" },
+        { "name": "Your Skill 2", "color": "green" },
+        { "name": "Your Skill 3", "color": "cyan" },
+        { "name": "Your Skill 4", "color": "purple" },
+        { "name": "Your Skill 5", "color": "orange" }
       ]
     },
-    "platform": {
+    "categoryName4": {
       "icon": "Cpu",
       "color": "cyan",
       "items": [
-        { "name": "MSIX Packaging", "color": "cyan" },
-        { "name": "Windows Services", "color": "green" },
-        { "name": "WinRT", "color": "purple" },
-        { "name": "COM", "color": "orange" },
-        { "name": "Background Tasks", "color": "pink" },
-        { "name": "Toast Notifications", "color": "yellow" },
-        { "name": "Deep Linking", "color": "cyan" },
-        { "name": "App Lifecycle", "color": "green" }
+        { "name": "Your Skill 1", "color": "cyan" },
+        { "name": "Your Skill 2", "color": "green" },
+        { "name": "Your Skill 3", "color": "purple" },
+        { "name": "Your Skill 4", "color": "orange" },
+        { "name": "Your Skill 5", "color": "pink" },
+        { "name": "Your Skill 6", "color": "yellow" },
+        { "name": "Your Skill 7", "color": "cyan" },
+        { "name": "Your Skill 8", "color": "green" }
       ]
     },
-    "networking": {
+    "categoryName5": {
       "icon": "Globe",
       "color": "green",
       "items": [
-        { "name": "IMAP", "color": "cyan" },
-        { "name": "SMTP", "color": "green" },
-        { "name": "POP3", "color": "orange" },
-        { "name": "OAuth2", "color": "pink" },
-        { "name": "REST APIs", "color": "purple" },
-        { "name": "WebSockets", "color": "cyan" }
+        { "name": "Your Skill 1", "color": "cyan" },
+        { "name": "Your Skill 2", "color": "green" },
+        { "name": "Your Skill 3", "color": "orange" },
+        { "name": "Your Skill 4", "color": "pink" },
+        { "name": "Your Skill 5", "color": "purple" },
+        { "name": "Your Skill 6", "color": "cyan" }
       ]
     },
-    "tooling": {
+    "categoryName6": {
       "icon": "Terminal",
       "color": "orange",
       "items": [
-        { "name": "Visual Studio", "color": "purple" },
-        { "name": "WinDbg", "color": "orange" },
-        { "name": "PerfView", "color": "green" },
-        { "name": "ETW Tracing", "color": "cyan" },
-        { "name": "App Center", "color": "pink" },
-        { "name": "Azure DevOps", "color": "cyan" }
+        { "name": "Your Skill 1", "color": "purple" },
+        { "name": "Your Skill 2", "color": "orange" },
+        { "name": "Your Skill 3", "color": "green" },
+        { "name": "Your Skill 4", "color": "cyan" },
+        { "name": "Your Skill 5", "color": "pink" },
+        { "name": "Your Skill 6", "color": "cyan" }
       ]
     }
   },
