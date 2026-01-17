@@ -149,7 +149,23 @@
     }
   ],
   "meta": {
-    "siteTitle": "Sanjei Pranav | Windows Application Engineer",
-    "siteDescription": "Enterprise Windows application developer specializing in Windows App SDK, UWP, and .NET desktop development"
+    "siteTitle": "Sanjei Pranav | Windows Application Engineer - WinUI, UWP, .NET",
+    "siteDescription": "Sanjei Pranav is an Enterprise Windows Application Engineer specializing in Windows App SDK (WinUI 3), UWP, .NET desktop development, and MVVM architecture. Based in Chennai, India with 2.25+ years of experience building large-scale corporate applications.",
+    "siteUrl": "https://sanjei2002.github.io/portfolio",
+    "keywords": [
+      "Sanjei Pranav",
+      "Sanjei Pranav S",
+      "Windows Application Engineer",
+      "WinUI 3 Developer",
+      "UWP Developer",
+      ".NET Developer",
+      "Windows App SDK",
+      "MVVM",
+      "C# Developer",
+      "Desktop Application Developer",
+      "Chennai Developer",
+      "Enterprise Software Engineer"
+    ],
+    "twitterHandle": null
   }
 }
