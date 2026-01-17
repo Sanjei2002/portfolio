@@ -1,4 +1,4 @@
-import { Mail, MapPin, Github, Linkedin, Twitter, Globe, Braces, Server, Cloud, Code, Database, Terminal, Layers, Cpu, Smartphone, ExternalLink } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Twitter, Globe, Braces, Server, Cloud, Code, Database, Terminal, Layers, Cpu, Smartphone, ExternalLink, Monitor, Zap, Shield, Link2, Clock } from "lucide-react";
 import UniverseBackground from "@/components/UniverseBackground";
 import SkillIcon from "@/components/SkillIcon";
 import portfolioData from "@/data/info.json";
@@ -32,7 +32,7 @@ const colorClasses: Record<DraculaColor, { text: string; bg: string; hover: stri
 };
 
 export default function Home() {
-  const { profile, contact, socials, skills, experience, projects } = data;
+  const { profile, contact, socials, skills, experience, platformFocus, caseStudies } = data;
 
   return (
     <>
@@ -122,9 +122,24 @@ export default function Home() {
 
       {/* Right Column - Content (Scrollable) */}
       <main className="w-full md:w-[65%] md:ml-[35%] p-8 md:p-12 md:py-20">
-        {/* Core Skills Section */}
+        {/* Platform Focus Section */}
+        {platformFocus && platformFocus.length > 0 && (
+          <section className="mb-16 p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
+            <h3 className="text-dracula-fg font-semibold text-lg mb-8">Platform Focus</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {platformFocus.map((focus, index) => (
+                <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-slate-900/50 border border-slate-800/30 hover:border-dracula-cyan/50 transition-all duration-200">
+                  <Monitor className="w-5 h-5 text-dracula-cyan flex-shrink-0" />
+                  <span className="text-dracula-fg text-sm">{focus}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Engineering Stack Section */}
         <section className="mb-16 p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
-          <h3 className="text-dracula-fg font-semibold text-lg mb-8">Core Skills</h3>
+          <h3 className="text-dracula-fg font-semibold text-lg mb-8">Engineering Stack</h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {Object.entries(skills).map(([categoryName, category], index) => {
@@ -166,96 +181,131 @@ export default function Home() {
                   <h4 className="font-semibold text-dracula-fg group-hover:text-dracula-pink transition-colors duration-200">{job.title}</h4>
                   <span className="text-dracula-comment text-sm">{job.period}</span>
                 </div>
-                <p className="text-dracula-pink text-sm mb-2">{job.company}</p>
-                <p className="text-dracula-comment text-sm leading-relaxed">
-                  {job.description}
-                </p>
+                <p className="text-dracula-pink text-sm mb-3">{job.company}</p>
+                {Array.isArray(job.description) ? (
+                  <ul className="space-y-2">
+                    {job.description.map((item, i) => (
+                      <li key={i} className="text-dracula-comment text-sm flex items-start gap-2">
+                        <span className="text-dracula-purple mt-1">•</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-dracula-comment text-sm leading-relaxed">
+                    {job.description}
+                  </p>
+                )}
               </div>
             ))}
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section className="p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
-          <h3 className="text-dracula-fg font-semibold text-lg mb-8">Projects</h3>
-          <div className="w-12 h-0.5 bg-dracula-purple -mt-6 mb-8"></div>
+        {/* Case Studies Section */}
+        {caseStudies && caseStudies.length > 0 && (
+          <section className="p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
+            <h3 className="text-dracula-fg font-semibold text-lg mb-8">Case Studies</h3>
+            <div className="w-12 h-0.5 bg-dracula-purple -mt-6 mb-8"></div>
 
-          <div className="space-y-12">
-            {projects.map((project, index) => (
-              <div key={index} className="group">
-                {/* Project Card */}
-                <div className="p-6 rounded-lg bg-slate-900/50 border border-slate-800/50 hover:border-dracula-purple/50 transition-all duration-300">
-                  <h4 className="text-dracula-orange font-semibold text-lg mb-4 group-hover:text-dracula-pink transition-colors duration-200">
-                    {project.title}
-                  </h4>
+            <div className="space-y-12">
+              {caseStudies.map((study, index) => (
+                <div key={index} className="group">
+                  {/* Case Study Card */}
+                  <div className="p-6 rounded-lg bg-slate-900/50 border border-slate-800/50 hover:border-dracula-purple/50 transition-all duration-300">
+                    <h4 className="text-dracula-orange font-semibold text-lg mb-4 group-hover:text-dracula-pink transition-colors duration-200">
+                      {study.title}
+                    </h4>
 
-                  <div className="flex flex-col lg:flex-row gap-6">
-                    {/* Project Image */}
-                    {project.image && (
-                      <div className="lg:w-2/5 flex-shrink-0">
-                        <div className="rounded-lg overflow-hidden border border-slate-700/50 shadow-lg">
-                          <img 
-                            src={project.image} 
-                            alt={project.title}
-                            className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
-                          />
+                    <div className="flex flex-col lg:flex-row gap-6">
+                      {/* Case Study Image */}
+                      {study.image && (
+                        <div className="lg:w-2/5 flex-shrink-0">
+                          <div className="rounded-lg overflow-hidden border border-slate-700/50 shadow-lg">
+                            <img 
+                              src={study.image} 
+                              alt={study.title}
+                              className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
 
-                    {/* Project Details */}
-                    <div className={project.image ? "lg:w-3/5" : "w-full"}>
-                      <p className="text-dracula-fg text-sm leading-relaxed mb-4">
-                        {project.description}
-                      </p>
-
-                      {/* Key Features */}
-                      {project.features.length > 0 && (
+                      {/* Case Study Details */}
+                      <div className={study.image ? "lg:w-3/5" : "w-full"}>
+                        {/* Overview */}
                         <div className="mb-4">
-                          <h5 className="text-dracula-fg font-medium text-sm mb-2">KEY FEATURES</h5>
-                          <ul className="space-y-1">
-                            {project.features.map((feature, i) => (
-                              <li key={i} className="text-dracula-comment text-sm flex items-start gap-2">
-                                <span className="text-dracula-purple mt-1">•</span>
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
+                          <h5 className="text-dracula-fg font-medium text-sm mb-2">OVERVIEW</h5>
+                          <p className="text-dracula-comment text-sm leading-relaxed">
+                            {study.overview}
+                          </p>
                         </div>
-                      )}
 
-                      {/* Technologies */}
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech.name}
-                            className={`bg-dracula-current/80 ${colorClasses[tech.color].text} rounded-full px-3 py-1 text-xs ${colorClasses[tech.color].hover} hover:text-dracula-bg transition-all duration-200 cursor-default flex items-center gap-1.5`}
+                        {/* Key Systems */}
+                        {study.keySystems.length > 0 && (
+                          <div className="mb-4">
+                            <h5 className="text-dracula-fg font-medium text-sm mb-2">KEY SYSTEMS</h5>
+                            <ul className="grid grid-cols-2 gap-1">
+                              {study.keySystems.map((system, i) => (
+                                <li key={i} className="text-dracula-comment text-sm flex items-start gap-2">
+                                  <span className="text-dracula-cyan mt-1">›</span>
+                                  {system}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {/* Engineering Challenges */}
+                        {study.challenges.length > 0 && (
+                          <div className="mb-4">
+                            <h5 className="text-dracula-fg font-medium text-sm mb-2">ENGINEERING CHALLENGES</h5>
+                            <ul className="space-y-1">
+                              {study.challenges.map((challenge, i) => (
+                                <li key={i} className="text-dracula-comment text-sm flex items-start gap-2">
+                                  <span className="text-dracula-pink mt-1">⚡</span>
+                                  {challenge}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {/* Tech Stack */}
+                        <div className="mb-4">
+                          <h5 className="text-dracula-fg font-medium text-sm mb-2">TECH STACK</h5>
+                          <div className="flex flex-wrap gap-2">
+                            {study.techStack.map((tech) => (
+                              <span
+                                key={tech.name}
+                                className={`bg-dracula-current/80 ${colorClasses[tech.color].text} rounded-full px-3 py-1 text-xs ${colorClasses[tech.color].hover} hover:text-dracula-bg transition-all duration-200 cursor-default flex items-center gap-1.5`}
+                              >
+                                <SkillIcon skillName={tech.name} className="w-3 h-3" />
+                                {tech.name}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Case Study Link */}
+                        {study.link && (
+                          <a
+                            href={study.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-dracula-current hover:bg-dracula-purple text-dracula-fg text-sm px-4 py-2 rounded-lg transition-all duration-200 group/link"
                           >
-                            <SkillIcon skillName={tech.name} className="w-3 h-3" />
-                            {tech.name}
-                          </span>
-                        ))}
+                            View Details
+                            <ExternalLink className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-200" />
+                          </a>
+                        )}
                       </div>
-
-                      {/* Project Link */}
-                      {project.link && (
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 bg-dracula-current hover:bg-dracula-purple text-dracula-fg text-sm px-4 py-2 rounded-lg transition-all duration-200 group/link"
-                        >
-                          Check it out!
-                          <ExternalLink className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-200" />
-                        </a>
-                      )}
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
+        )}
       </main>
     </div>
     </>

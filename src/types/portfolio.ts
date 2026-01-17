@@ -59,7 +59,17 @@ export interface Experience {
   title: string;
   company: string;
   period: string;
-  description: string;
+  description: string | string[];
+}
+
+export interface CaseStudy {
+  title: string;
+  overview: string;
+  image: string | null;
+  link: string | null;
+  techStack: SkillItem[];
+  keySystems: string[];
+  challenges: string[];
 }
 
 export interface Project {
@@ -82,6 +92,8 @@ export interface PortfolioData {
   socials: Socials;
   skills: Skills;
   experience: Experience[];
-  projects: Project[];
+  platformFocus?: string[];
+  caseStudies?: CaseStudy[];
+  projects?: Project[];
   meta: Meta;
 }

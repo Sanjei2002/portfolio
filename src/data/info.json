@@ -1,19 +1,19 @@
 {
   "profile": {
-    "initials": "JD",
-    "name": "John Doe",
-    "title": "Senior Software Engineer",
-    "bio": "15+ years building scalable systems and leading engineering teams",
-    "avatarUrl": null
+    "initials": "SP",
+    "name": "Sanjei Pranav",
+    "title": "Windows Application Engineer | WinUI, UWP, .NET",
+    "bio": "Enterprise Windows application developer with 2.25 years of experience building and maintaining a large-scale corporate email client. Specialized in Windows App SDK, UWP, MVVM architecture, and high-performance desktop systems.",
+    "avatarUrl": "https://unavatar.io/linkedin/sanjei-pranav-s"
   },
   "contact": {
-    "email": "john.doe@example.com",
-    "location": "San Francisco, CA",
+    "email": "s.sanjeipranav@gmail.com",
+    "location": "Chennai, India",
     "phone": null
   },
   "socials": {
-    "github": "https://github.com/johndoe",
-    "linkedin": "https://linkedin.com/in/johndoe",
+    "github": "https://github.com/Sanjei2002",
+    "linkedin": "https://www.linkedin.com/in/sanjei-pranav-s",
     "twitter": null,
     "website": null
   },
@@ -22,100 +22,134 @@
       "icon": "Braces",
       "color": "yellow",
       "items": [
-        { "name": "TypeScript", "color": "cyan" },
-        { "name": "Python", "color": "green" },
-        { "name": "Go", "color": "orange" }
+        { "name": "C#", "color": "purple" },
+        { "name": "XAML", "color": "cyan" },
+        { "name": "PowerShell", "color": "green" },
+        { "name": "C++", "color": "orange" }
       ]
     },
-    "backend": {
-      "icon": "Server",
-      "color": "green",
-      "items": [
-        { "name": "Node.js", "color": "green" },
-        { "name": "PostgreSQL", "color": "cyan" },
-        { "name": "Redis", "color": "red" }
-      ]
-    },
-    "cloud": {
-      "icon": "Cloud",
+    "frameworks": {
+      "icon": "Layers",
       "color": "purple",
       "items": [
-        { "name": "AWS", "color": "orange" },
-        { "name": "Kubernetes", "color": "cyan" },
-        { "name": "Docker", "color": "purple" }
+        { "name": ".NET 8", "color": "purple" },
+        { "name": "Windows App SDK", "color": "cyan" },
+        { "name": "UWP", "color": "cyan" },
+        { "name": "WinUI 3", "color": "pink" },
+        { "name": "WPF", "color": "purple" }
+      ]
+    },
+    "architecture": {
+      "icon": "Code",
+      "color": "pink",
+      "items": [
+        { "name": "MVVM", "color": "pink" },
+        { "name": "Clean Architecture", "color": "green" },
+        { "name": "Dependency Injection", "color": "cyan" },
+        { "name": "Modular UI", "color": "purple" },
+        { "name": "Plugin Systems", "color": "orange" }
+      ]
+    },
+    "platform": {
+      "icon": "Cpu",
+      "color": "cyan",
+      "items": [
+        { "name": "MSIX Packaging", "color": "cyan" },
+        { "name": "Windows Services", "color": "green" },
+        { "name": "WinRT", "color": "purple" },
+        { "name": "COM", "color": "orange" },
+        { "name": "Background Tasks", "color": "pink" },
+        { "name": "Toast Notifications", "color": "yellow" },
+        { "name": "Deep Linking", "color": "cyan" },
+        { "name": "App Lifecycle", "color": "green" }
+      ]
+    },
+    "networking": {
+      "icon": "Globe",
+      "color": "green",
+      "items": [
+        { "name": "IMAP", "color": "cyan" },
+        { "name": "SMTP", "color": "green" },
+        { "name": "POP3", "color": "orange" },
+        { "name": "OAuth2", "color": "pink" },
+        { "name": "REST APIs", "color": "purple" },
+        { "name": "WebSockets", "color": "cyan" }
+      ]
+    },
+    "tooling": {
+      "icon": "Terminal",
+      "color": "orange",
+      "items": [
+        { "name": "Visual Studio", "color": "purple" },
+        { "name": "WinDbg", "color": "orange" },
+        { "name": "PerfView", "color": "green" },
+        { "name": "ETW Tracing", "color": "cyan" },
+        { "name": "App Center", "color": "pink" },
+        { "name": "Azure DevOps", "color": "cyan" }
       ]
     }
   },
   "experience": [
     {
-      "title": "Senior Software Engineer",
-      "company": "Tech Corp",
-      "period": "2020 - Present",
-      "description": "Led development of microservices architecture. 40% improvement in system performance."
-    },
-    {
-      "title": "Software Engineer",
-      "company": "Innovation Labs",
-      "period": "2017 - 2020",
-      "description": "Architected cloud-native applications, mentored junior developers."
-    },
-    {
-      "title": "Full Stack Developer",
-      "company": "StartUp Inc",
-      "period": "2015 - 2017",
-      "description": "Built scalable web applications using React and Node.js."
+      "title": "Software Engineer – Enterprise Mail Platform",
+      "company": "Trident",
+      "period": "2023 – Present",
+      "description": [
+        "Core developer of a large-scale enterprise email client built using UWP and Windows App SDK",
+        "Designed modular MVVM-based architecture for mailbox, composer, and calendar modules",
+        "Built high-performance IMAP/SMTP sync engine with offline caching",
+        "Implemented OAuth2 authentication with secure token refresh",
+        "Integrated Windows notifications, deep links, and background sync",
+        "Optimized startup performance and UI responsiveness",
+        "Built MSIX packaging and auto-update pipeline",
+        "Implemented telemetry, crash diagnostics, and logging"
+      ]
     }
   ],
-  "projects": [
+  "platformFocus": [
+    "Windows Desktop Engineering",
+    "Enterprise Application Development",
+    "System Performance Optimization",
+    "Native OS Integration",
+    "Security & Authentication",
+    "Long-Lived Product Architecture"
+  ],
+  "caseStudies": [
     {
-      "title": "GoogleOAuth: Full-Stack Google Auth Platform",
-      "description": "GoogleOAuth provides a secure and scalable authentication system with Google login and session management. Built with clean architecture — ideal for apps needing robust auth flows and admin-level control.",
-      "image": "/images/projects/google-oauth.png",
-      "link": "https://github.com/johndoe/google-oauth",
-      "features": [
-        "Secure Google OAuth 2.0 login",
-        "JWT authentication with refresh tokens",
-        "Soft-delete and easy account restore",
-        "Per-device session tracking & logout",
-        "Role-based route access protection",
-        "Admin panel with detailed insights",
-        "Animated & sleek UI with persistent login"
-      ],
-      "technologies": [
-        { "name": "C#", "color": "purple" },
-        { "name": ".NET Web API", "color": "purple" },
-        { "name": "MongoDB", "color": "green" },
-        { "name": "Docker", "color": "cyan" },
-        { "name": "Next.js", "color": "pink" },
-        { "name": "React", "color": "cyan" },
-        { "name": "TypeScript", "color": "cyan" },
-        { "name": "Tailwind CSS", "color": "cyan" }
-      ]
-    },
-    {
-      "title": "DevFlow: Real-time Collaboration Platform",
-      "description": "A real-time collaborative development environment with live code sharing, video calls, and integrated project management for remote engineering teams.",
+      "title": "Trident Enterprise Mail Client",
+      "overview": "Enterprise-grade Windows email client for corporate communication with secure auth, offline mode, and native OS integration.",
       "image": null,
-      "link": "https://github.com/johndoe/devflow",
-      "features": [
-        "Real-time code collaboration with WebSockets",
-        "Integrated video conferencing",
-        "Git integration with PR reviews",
-        "Kanban-style task management",
-        "Team analytics dashboard"
+      "link": null,
+      "techStack": [
+        { "name": "C#", "color": "purple" },
+        { "name": ".NET 8", "color": "purple" },
+        { "name": "Windows App SDK", "color": "cyan" },
+        { "name": "UWP", "color": "cyan" },
+        { "name": "MVVM", "color": "pink" },
+        { "name": "OAuth2", "color": "green" },
+        { "name": "IMAP", "color": "orange" },
+        { "name": "SMTP", "color": "orange" },
+        { "name": "MSIX", "color": "cyan" }
       ],
-      "technologies": [
-        { "name": "TypeScript", "color": "cyan" },
-        { "name": "Node.js", "color": "green" },
-        { "name": "PostgreSQL", "color": "cyan" },
-        { "name": "Redis", "color": "red" },
-        { "name": "WebRTC", "color": "orange" },
-        { "name": "Docker", "color": "purple" }
+      "keySystems": [
+        "Mail sync engine",
+        "Attachment manager",
+        "Offline cache",
+        "Notification service",
+        "Rich-text composer",
+        "Account & mailbox manager"
+      ],
+      "challenges": [
+        "Large mailbox performance",
+        "Background sync reliability",
+        "Secure credential storage",
+        "Zero-downtime updates",
+        "Crash diagnostics at scale"
       ]
     }
   ],
   "meta": {
-    "siteTitle": "John Doe | Portfolio",
-    "siteDescription": "Personal portfolio of John Doe - Senior Software Engineer"
+    "siteTitle": "John Doe | Windows Application Engineer",
+    "siteDescription": "Enterprise Windows application developer specializing in Windows App SDK, UWP, and .NET desktop development"
   }
 }

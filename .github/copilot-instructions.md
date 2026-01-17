@@ -4,7 +4,16 @@ This document provides context for GitHub Copilot to better assist with this pro
 
 ## Project Overview
 
-This is a personal portfolio/digital resume website built with Next.js 15, TailwindCSS, and TypeScript. It features an interactive galaxy reveal effect where moving the mouse reveals a space background behind a dark overlay.
+This is a **Windows Desktop Engineer Portfolio** website built with Next.js 15, TailwindCSS, and TypeScript. It showcases enterprise Windows application development experience, featuring an interactive galaxy reveal effect. The portfolio is specifically designed for a Windows platform specialist working on enterprise desktop applications.
+
+## Target Persona
+
+Enterprise Windows Application Engineer with experience building large-scale corporate applications using:
+- Windows App SDK (WinUI 3)
+- UWP
+- .NET Desktop
+- MVVM Architecture
+- System-level engineering
 
 ## Tech Stack
 
@@ -12,6 +21,7 @@ This is a personal portfolio/digital resume website built with Next.js 15, Tailw
 - **TailwindCSS 3.4** - Utility-first CSS
 - **TypeScript 5** - Type safety
 - **Lucide React** - Icon library
+- **react-icons** - Extended icon library for Windows/enterprise tech icons
 
 ## Key Components
 
@@ -21,7 +31,11 @@ The main visual effect component. Uses CSS `mask-image` with `radial-gradient` t
 ### `src/app/page.tsx`
 The main portfolio page with a two-column layout:
 - Left (35%): Fixed profile section with glassmorphism effect
-- Right (65%): Scrollable content area for skills and experience
+- Right (65%): Scrollable content area with:
+  - Platform Focus section
+  - Engineering Stack (skills)
+  - Experience with bullet-point descriptions
+  - Case Studies (enterprise projects)
 
 ### `tailwind.config.ts`
 Extended with custom Dracula color palette for consistent theming.
@@ -49,7 +63,9 @@ All personal data is stored in `src/data/info.json`. Edit this file to update:
 - Contact: email, location, phone
 - Socials: GitHub, LinkedIn, Twitter, website URLs
 - Skills: categories with icons, colors, and skill items
-- Experience: job history with title, company, period, description
+- Experience: job history with title, company, period, description (string or array of bullets)
+- Platform Focus: array of engineering focus areas
+- Case Studies: enterprise project showcases with techStack, keySystems, and challenges
 - Meta: site title and description for SEO
 
 ### Adding a new skill category

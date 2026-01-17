@@ -54,7 +54,9 @@ import {
   SiSpring,
   SiNestjs,
 } from "react-icons/si";
-import { FaAws, FaJava, FaMicrosoft } from "react-icons/fa";
+import { FaAws, FaJava, FaMicrosoft, FaWindows, FaCogs, FaNetworkWired, FaLock, FaCube, FaBell, FaLink, FaExchangeAlt, FaBox, FaServer, FaPlug, FaLayerGroup, FaSitemap, FaSyringe, FaPuzzlePiece, FaChartLine, FaWaveSquare, FaTerminal, FaCode } from "react-icons/fa";
+import { VscDebugAlt, VscWindow, VscAzureDevops } from "react-icons/vsc";
+import { TbApi, TbMail, TbMailForward } from "react-icons/tb";
 
 // Map skill names (lowercase) to icons
 const skillIconMap: Record<string, IconType> = {
@@ -73,6 +75,54 @@ const skillIconMap: Record<string, IconType> = {
   ruby: SiRuby,
   swift: SiSwift,
   kotlin: SiKotlin,
+  powershell: FaTerminal,
+  xaml: FaCode,
+
+  // Windows Frameworks
+  ".net 6": SiDotnet,
+  ".net 8": SiDotnet,
+  ".net": SiDotnet,
+  ".net web api": SiDotnet,
+  dotnet: SiDotnet,
+  "windows app sdk": FaWindows,
+  uwp: FaWindows,
+  "winui 3": VscWindow,
+  winui: VscWindow,
+  wpf: VscWindow,
+
+  // Architecture Patterns
+  mvvm: FaSitemap,
+  "clean architecture": FaLayerGroup,
+  "dependency injection": FaSyringe,
+  "modular ui": FaCube,
+  "plugin systems": FaPuzzlePiece,
+
+  // Windows Platform
+  "msix packaging": FaBox,
+  msix: FaBox,
+  "windows services": FaServer,
+  winrt: FaWindows,
+  com: FaPlug,
+  "background tasks": FaCogs,
+  "toast notifications": FaBell,
+  "deep linking": FaLink,
+  "app lifecycle": FaExchangeAlt,
+
+  // Networking & Protocols
+  imap: TbMail,
+  smtp: TbMailForward,
+  pop3: TbMail,
+  oauth2: FaLock,
+  "rest apis": TbApi,
+  websockets: FaNetworkWired,
+
+  // Tooling
+  "visual studio": FaMicrosoft,
+  windbg: VscDebugAlt,
+  perfview: FaChartLine,
+  "etw tracing": FaWaveSquare,
+  "app center": FaMicrosoft,
+  "azure devops": VscAzureDevops,
 
   // Runtimes & Frameworks
   "node.js": SiNodedotjs,
@@ -85,9 +135,6 @@ const skillIconMap: Record<string, IconType> = {
   vue: SiVuedotjs,
   angular: SiAngular,
   svelte: SiSvelte,
-  ".net": SiDotnet,
-  ".net web api": SiDotnet,
-  dotnet: SiDotnet,
   express: SiExpress,
   "express.js": SiExpress,
   fastapi: SiFastapi,
