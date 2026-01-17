@@ -98,7 +98,7 @@ portfolio/
   },
   "contact": {
     "email": "your.email@example.com",
-    "location": "Your Location",
+    "location": "Your City, Country",
     "phone": null
   },
   "socials": {
