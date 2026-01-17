@@ -6,6 +6,7 @@ import portfolioData from "@/data/info.json";
 import type { PortfolioData, DraculaColor, IconName } from "@/types/portfolio";
 
 const data = portfolioData as PortfolioData;
+const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
 // Map icon names to components
 const iconMap = {
@@ -46,7 +47,7 @@ export default function Home() {
           {/* Avatar */}
           <div className="w-32 h-32 rounded-full bg-dracula-current mb-8 overflow-hidden ring-2 ring-dracula-purple hover:ring-4 hover:ring-dracula-pink transition-all duration-300">
             {profile.avatarUrl ? (
-              <img src={profile.avatarUrl} alt={profile.name} className="w-full h-full object-cover" />
+              <img src={`${basePath}${profile.avatarUrl}`} alt={profile.name} className="w-full h-full object-cover" />
             ) : (
               <div className="w-full h-full bg-gradient-to-br from-dracula-comment to-dracula-current flex items-center justify-center text-dracula-purple text-4xl font-semibold">
                 {profile.initials}
