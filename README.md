@@ -135,6 +135,35 @@ Use these icon names in your skill categories:
 Use these color names for skills:
 `cyan`, `green`, `orange`, `pink`, `purple`, `red`, `yellow`
 
+## 🚀 Deployment
+
+### GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages.
+
+1. **Enable GitHub Pages in your repository**
+   - Go to Settings → Pages
+   - Under "Build and deployment", select **GitHub Actions** as the source
+
+2. **Push to main branch**
+   - The GitHub Actions workflow will automatically build and deploy your site
+   - Find the workflow at `.github/workflows/deploy.yml`
+
+3. **Access your site**
+   - Your portfolio will be available at `https://<username>.github.io/Dev_DogTag`
+
+4. **Custom domain (optional)**
+   - Add a `CNAME` file to the `public/` folder with your domain
+   - Configure DNS settings with your domain provider
+
+### Manual Deployment
+
+```bash
+npm run build
+```
+
+The static output will be in the `out/` directory. Upload this folder to any static hosting provider.
+
 ## 🛠 Tech Stack
 
 - **Framework**: [Next.js 15](https://nextjs.org/) with App Router

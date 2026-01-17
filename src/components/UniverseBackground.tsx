@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+const basePath = process.env.NODE_ENV === "production" ? "/Dev_DogTag" : "";
+
 export default function UniverseBackground() {
   const [position, setPosition] = useState({ x: -1000, y: -1000 });
 
@@ -34,7 +36,7 @@ export default function UniverseBackground() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url(/images/galaxy.jpg)",
+            backgroundImage: `url(${basePath}/images/galaxy.jpg)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -58,7 +60,7 @@ export default function UniverseBackground() {
       <div
         className="fixed inset-0 -z-10 pointer-events-none md:hidden"
         style={{
-          backgroundImage: "url(/images/galaxy.jpg)",
+          backgroundImage: `url(${basePath}/images/galaxy.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: 0.35,

@@ -1,5 +1,6 @@
 import { Mail, MapPin, Github, Linkedin, Twitter, Globe, Braces, Server, Cloud, Code, Database, Terminal, Layers, Cpu, Smartphone, ExternalLink } from "lucide-react";
 import UniverseBackground from "@/components/UniverseBackground";
+import SkillIcon from "@/components/SkillIcon";
 import portfolioData from "@/data/info.json";
 import type { PortfolioData, DraculaColor, IconName } from "@/types/portfolio";
 
@@ -140,8 +141,9 @@ export default function Home() {
                     {category.items.map((skill) => (
                       <span
                         key={skill.name}
-                        className={`bg-dracula-current ${colorClasses[skill.color].text} rounded-full px-3 py-1 text-sm ${colorClasses[skill.color].hover} hover:text-dracula-bg transition-all duration-200 cursor-default`}
+                        className={`bg-dracula-current ${colorClasses[skill.color].text} rounded-full px-3 py-1 text-sm ${colorClasses[skill.color].hover} hover:text-dracula-bg transition-all duration-200 cursor-default flex items-center gap-1.5`}
                       >
+                        <SkillIcon skillName={skill.name} className="w-3.5 h-3.5" />
                         {skill.name}
                       </span>
                     ))}
@@ -227,8 +229,9 @@ export default function Home() {
                         {project.technologies.map((tech) => (
                           <span
                             key={tech.name}
-                            className={`bg-dracula-current/80 ${colorClasses[tech.color].text} rounded-full px-3 py-1 text-xs ${colorClasses[tech.color].hover} hover:text-dracula-bg transition-all duration-200 cursor-default`}
+                            className={`bg-dracula-current/80 ${colorClasses[tech.color].text} rounded-full px-3 py-1 text-xs ${colorClasses[tech.color].hover} hover:text-dracula-bg transition-all duration-200 cursor-default flex items-center gap-1.5`}
                           >
+                            <SkillIcon skillName={tech.name} className="w-3 h-3" />
                             {tech.name}
                           </span>
                         ))}
