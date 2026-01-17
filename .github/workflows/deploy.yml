@@ -3,7 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - gh-pages
+  pull_request:
+    branches:
+      - gh-pages
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -42,6 +46,7 @@ jobs:
           path: ./out
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
