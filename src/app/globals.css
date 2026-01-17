@@ -13,3 +13,365 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Theme Variables */
+:root {
+  --bg-primary: #050510;
+  --bg-card: rgba(15, 23, 42, 0.8);
+  --bg-card-hover: rgba(15, 23, 42, 0.9);
+  --border-card: rgba(51, 65, 85, 0.5);
+  --border-hover: rgba(139, 92, 246, 0.3);
+  --text-primary: #f8f8f2;
+  --text-muted: #6272a4;
+  --accent-primary: #bd93f9;
+  --accent-secondary: #ff79c6;
+  --accent-cyan: #8be9fd;
+}
+
+/* ============================================
+   DARK THEME - Depth & Elevation System
+   ============================================ */
+
+/* Dark theme card elevation - glassmorphism with depth */
+html.dark .bg-slate-950\/80,
+html:not(.light) .bg-slate-950\/80 {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(148, 163, 184, 0.08) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(139, 92, 246, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+html.dark .bg-slate-950\/70,
+html:not(.light) .bg-slate-950\/70 {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(148, 163, 184, 0.1) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(139, 92, 246, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+html.dark .bg-slate-900\/50,
+html:not(.light) .bg-slate-900\/50 {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(148, 163, 184, 0.06) !important;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+/* Dark theme hover states with glow */
+html.dark .hover\:border-purple-500\/30:hover,
+html:not(.light) .hover\:border-purple-500\/30:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(139, 92, 246, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+html.dark .hover\:border-dracula-purple\/50:hover,
+html:not(.light) .hover\:border-dracula-purple\/50:hover {
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.4),
+    0 0 16px rgba(139, 92, 246, 0.1);
+}
+
+html.dark .hover\:border-dracula-cyan\/50:hover,
+html:not(.light) .hover\:border-dracula-cyan\/50:hover {
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.4),
+    0 0 16px rgba(139, 233, 253, 0.08);
+}
+
+/* Dark theme ambient glow on sections */
+html.dark .shadow-xl,
+html:not(.light) .shadow-xl {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(139, 92, 246, 0.03);
+}
+
+html.dark .shadow-purple-500\/5,
+html:not(.light) .shadow-purple-500\/5 {
+  --tw-shadow-color: rgba(139, 92, 246, 0.08);
+  box-shadow: 0 8px 32px var(--tw-shadow-color);
+}
+
+/* ============================================
+   LIGHT THEME - Material & Elevation System
+   ============================================ */
+
+html.light {
+  /* Layered Material Surfaces - No Pure White */
+  --bg-primary: #eef2f7;
+  --bg-section: #f4f7fb;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-elevated: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  
+  /* Soft Borders - No Hard Edges */
+  --border-card: rgba(15, 23, 42, 0.04);
+  --border-hover: rgba(56, 189, 248, 0.25);
+  --border-accent: rgba(56, 189, 248, 0.5);
+  
+  /* Text Contrast Hierarchy */
+  --text-heading: #0f172a;
+  --text-primary: #334155;
+  --text-muted: #64748b;
+  --text-label: #94a3b8;
+  --text-divider: #e2e8f0;
+  
+  /* Blueprint Accent System */
+  --accent-primary: #0078D4;
+  --accent-secondary: #38bdf8;
+  --accent-cyan: #0ea5e9;
+  --accent-line: #38bdf8;
+}
+
+/* Theme-aware utility classes */
+.theme-card {
+  background-color: var(--bg-card);
+  border-color: var(--border-card);
+}
+
+.theme-card:hover {
+  border-color: var(--border-hover);
+}
+
+.theme-text {
+  color: var(--text-primary);
+}
+
+.theme-text-muted {
+  color: var(--text-muted);
+}
+
+.theme-accent {
+  color: var(--accent-primary);
+}
+
+/* Light theme specific overrides - Material & Elevation System */
+html.light .bg-slate-950\/80 {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+html.light .bg-slate-950\/70 {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+html.light .bg-slate-900\/50 {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+html.light .border-slate-800\/50 {
+  border-color: rgba(15, 23, 42, 0.04);
+}
+
+html.light .border-slate-800\/30 {
+  border-color: rgba(15, 23, 42, 0.03);
+}
+
+html.light .border-slate-700\/50 {
+  border-color: rgba(15, 23, 42, 0.04);
+}
+
+html.light .text-dracula-fg {
+  color: #0f172a;
+}
+
+html.light .text-dracula-comment {
+  color: #64748b;
+}
+
+html.light .text-dracula-purple {
+  color: #0078D4;
+}
+
+html.light .text-dracula-pink {
+  color: #0ea5e9;
+}
+
+html.light .text-dracula-cyan {
+  color: #0284c7;
+}
+
+html.light .text-dracula-orange {
+  color: #ea580c;
+}
+
+html.light .text-dracula-green {
+  color: #059669;
+}
+
+html.light .text-dracula-yellow {
+  color: #ca8a04;
+}
+
+html.light .text-dracula-red {
+  color: #dc2626;
+}
+
+html.light .bg-dracula-current {
+  background-color: rgba(241, 245, 249, 0.9);
+}
+
+html.light .bg-dracula-current\/80 {
+  background-color: rgba(241, 245, 249, 0.8);
+}
+
+html.light .bg-dracula-pink {
+  background-color: #0ea5e9;
+}
+
+html.light .bg-dracula-purple {
+  background-color: #0078D4;
+}
+
+html.light .border-dracula-current {
+  border-color: rgba(15, 23, 42, 0.06);
+}
+
+html.light .border-dracula-pink {
+  border-color: #38bdf8;
+}
+
+html.light .hover\:border-purple-500\/30:hover {
+  border-color: rgba(0, 120, 212, 0.4);
+}
+
+html.light .hover\:border-dracula-purple\/50:hover {
+  border-color: rgba(0, 120, 212, 0.5);
+}
+
+html.light .hover\:border-dracula-cyan\/50:hover {
+  border-color: rgba(14, 165, 233, 0.5);
+}
+
+html.light .hover\:border-dracula-pink:hover {
+  border-color: #0ea5e9;
+}
+
+html.light .shadow-purple-500\/5 {
+  --tw-shadow-color: rgba(15, 23, 42, 0.04);
+}
+
+html.light .shadow-purple-500\/10 {
+  --tw-shadow-color: rgba(15, 23, 42, 0.06);
+}
+
+html.light .ring-dracula-purple {
+  --tw-ring-color: #0078D4;
+}
+
+html.light .hover\:ring-dracula-pink:hover {
+  --tw-ring-color: #0ea5e9;
+}
+
+html.light .hover\:text-dracula-purple:hover {
+  color: #0078D4;
+}
+
+html.light .hover\:text-dracula-pink:hover {
+  color: #0ea5e9;
+}
+
+html.light .hover\:bg-dracula-purple:hover {
+  background-color: #0078D4;
+}
+
+html.light .hover\:bg-dracula-cyan:hover {
+  background-color: #0ea5e9;
+}
+
+html.light .hover\:bg-dracula-pink:hover {
+  background-color: #0ea5e9;
+}
+
+html.light .hover\:bg-dracula-green:hover {
+  background-color: #059669;
+}
+
+html.light .hover\:bg-dracula-orange:hover {
+  background-color: #ea580c;
+}
+
+html.light .hover\:bg-dracula-yellow:hover {
+  background-color: #ca8a04;
+}
+
+html.light .hover\:bg-dracula-red:hover {
+  background-color: #dc2626;
+}
+
+/* Light theme hover text - ensure white text on colored backgrounds */
+html.light .hover\:text-dracula-bg:hover {
+  color: #ffffff !important;
+}
+
+html.light .group-hover\:text-dracula-pink {
+  color: #0ea5e9;
+}
+
+html.light .from-dracula-comment {
+  --tw-gradient-from: #e2e8f0;
+}
+
+html.light .to-dracula-current {
+  --tw-gradient-to: #f1f5f9;
+}
+
+/* Light theme backdrop blur - Fluent Acrylic effect */
+html.light .backdrop-blur-md {
+  backdrop-filter: blur(12px) saturate(180%);
+}
+
+/* Material Card System for Light Theme */
+html.light .rounded-xl {
+  border-radius: 16px;
+}
+
+html.light .rounded-lg {
+  border-radius: 12px;
+}
+
+/* Blueprint Accent Divider */
+html.light .bg-dracula-pink {
+  background-color: #38bdf8;
+}
+
+html.light .bg-dracula-purple {
+  background-color: #0078D4;
+}
+
+/* Blueprint Accent Lines - Section Dividers */
+html.light .border-dracula-current {
+  border-color: rgba(56, 189, 248, 0.15);
+}
+
+/* Elevated hover states */
+html.light .hover\:border-purple-500\/30:hover {
+  border-color: rgba(56, 189, 248, 0.25);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+}
+
+html.light .hover\:border-dracula-purple\/50:hover {
+  border-color: rgba(0, 120, 212, 0.3);
+}
+
+html.light .hover\:border-dracula-cyan\/50:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* Soft inner card styles */
+html.light .group:hover .bg-slate-900\/50 {
+  background: rgba(255, 255, 255, 0.95);
+}

@@ -1,5 +1,6 @@
 import { Mail, MapPin, Github, Linkedin, Twitter, Globe, Braces, Server, Cloud, Code, Database, Terminal, Layers, Cpu, Smartphone, ExternalLink, Monitor, Zap, Shield, Link2, Clock } from "lucide-react";
 import UniverseBackground from "@/components/UniverseBackground";
+import ThemeToggle from "@/components/ThemeToggle";
 import SkillIcon from "@/components/SkillIcon";
 import portfolioData from "@/data/info.json";
 import type { PortfolioData, DraculaColor, IconName } from "@/types/portfolio";
@@ -37,9 +38,10 @@ export default function Home() {
   return (
     <>
       <UniverseBackground />
+      <ThemeToggle />
       <div className="min-h-screen flex flex-col md:flex-row relative z-10">
         {/* Left Column - Profile (Fixed on Desktop) */}
-        <aside className="w-full md:w-[35%] md:fixed md:h-screen md:border-r md:border-slate-800/30 p-8 md:p-12 flex flex-col bg-slate-950/80 backdrop-blur-md">
+        <aside className="w-full md:w-[35%] md:fixed md:h-screen md:border-r md:border-slate-800/30 p-8 md:p-14 flex flex-col bg-slate-950/80 backdrop-blur-md">
         <div className="flex-1 flex flex-col justify-center items-center text-center">
           {/* Avatar */}
           <div className="w-32 h-32 rounded-full bg-dracula-current mb-8 overflow-hidden ring-2 ring-dracula-purple hover:ring-4 hover:ring-dracula-pink transition-all duration-300">
@@ -121,14 +123,14 @@ export default function Home() {
       </aside>
 
       {/* Right Column - Content (Scrollable) */}
-      <main className="w-full md:w-[65%] md:ml-[35%] p-8 md:p-12 md:py-20">
+      <main className="w-full md:w-[65%] md:ml-[35%] p-8 md:p-14 md:py-24">
         {/* Platform Focus Section */}
         {platformFocus && platformFocus.length > 0 && (
-          <section className="mb-16 p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
+          <section className="mb-20 p-8 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
             <h3 className="text-dracula-fg font-semibold text-lg mb-8">Platform Focus</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {platformFocus.map((focus, index) => (
-                <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-slate-900/50 border border-slate-800/30 hover:border-dracula-cyan/50 transition-all duration-200">
+                <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-slate-900/50 border border-slate-800/30 hover:border-dracula-cyan/50 transition-all duration-200">
                   <Monitor className="w-5 h-5 text-dracula-cyan flex-shrink-0" />
                   <span className="text-dracula-fg text-sm">{focus}</span>
                 </div>
@@ -138,7 +140,7 @@ export default function Home() {
         )}
 
         {/* Engineering Stack Section */}
-        <section className="mb-16 p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
+        <section className="mb-20 p-8 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
           <h3 className="text-dracula-fg font-semibold text-lg mb-8">Engineering Stack</h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -170,10 +172,10 @@ export default function Home() {
         </section>
 
         {/* Experience Section */}
-        <section className="mb-16 p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
+        <section className="mb-20 p-8 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
           <h3 className="text-dracula-fg font-semibold text-lg mb-8">Experience</h3>
 
-          <div className="space-y-8">
+          <div className="space-y-10">
             {experience.map((job, index) => (
               <div key={index} className="relative pl-6 border-l-2 border-dracula-current hover:border-dracula-pink transition-colors duration-200 group">
                 <div className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-dracula-pink group-hover:scale-150 transition-transform duration-200"></div>
@@ -203,7 +205,7 @@ export default function Home() {
 
         {/* Case Studies Section */}
         {caseStudies && caseStudies.length > 0 && (
-          <section className="p-6 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
+          <section className="p-8 rounded-xl bg-slate-950/70 backdrop-blur-md border border-slate-800/50 hover:border-purple-500/30 transition-all duration-300 shadow-xl shadow-purple-500/5">
             <h3 className="text-dracula-fg font-semibold text-lg mb-8">Case Studies</h3>
             <div className="w-12 h-0.5 bg-dracula-purple -mt-6 mb-8"></div>
 
@@ -211,7 +213,7 @@ export default function Home() {
               {caseStudies.map((study, index) => (
                 <div key={index} className="group">
                   {/* Case Study Card */}
-                  <div className="p-6 rounded-lg bg-slate-900/50 border border-slate-800/50 hover:border-dracula-purple/50 transition-all duration-300">
+                  <div className="p-8 rounded-lg bg-slate-900/50 border border-slate-800/50 hover:border-dracula-purple/50 transition-all duration-300">
                     <h4 className="text-dracula-orange font-semibold text-lg mb-4 group-hover:text-dracula-pink transition-colors duration-200">
                       {study.title}
                     </h4>
