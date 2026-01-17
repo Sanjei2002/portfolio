@@ -5,30 +5,20 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 
 const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
+// Extract data from info.json
+const { profile, meta, socials } = portfolioData;
+
 export const metadata: Metadata = {
-  title: portfolioData.meta.siteTitle,
-  description: portfolioData.meta.siteDescription,
+  title: meta.siteTitle,
+  description: meta.siteDescription,
   
-  // SEO Keywords
-  keywords: [
-    "Sanjei Pranav",
-    "Sanjei Pranav S",
-    "Windows Application Engineer",
-    "WinUI 3 Developer",
-    "UWP Developer",
-    ".NET Developer",
-    "Windows App SDK",
-    "MVVM",
-    "C# Developer",
-    "Desktop Application Developer",
-    "Chennai Developer",
-    "Enterprise Software Engineer",
-  ],
+  // SEO Keywords from info.json
+  keywords: meta.keywords,
   
-  // Author information
-  authors: [{ name: "Sanjei Pranav", url: "https://sanjei2002.github.io/portfolio" }],
-  creator: "Sanjei Pranav",
-  publisher: "Sanjei Pranav",
+  // Author information from info.json
+  authors: [{ name: profile.name, url: meta.siteUrl }],
+  creator: profile.name,
+  publisher: profile.name,
   
   // Favicon
   icons: {
@@ -41,16 +31,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://sanjei2002.github.io/portfolio",
-    siteName: "Sanjei Pranav | Portfolio",
-    title: portfolioData.meta.siteTitle,
-    description: portfolioData.meta.siteDescription,
+    url: meta.siteUrl,
+    siteName: `${profile.name} | Portfolio`,
+    title: meta.siteTitle,
+    description: meta.siteDescription,
     images: [
       {
-        url: `https://sanjei2002.github.io/portfolio/og-image.svg`,
+        url: `${meta.siteUrl}/og-image.svg`,
         width: 1200,
         height: 630,
-        alt: "Sanjei Pranav - Windows Application Engineer",
+        alt: `${profile.name} - ${profile.title}`,
       },
     ],
   },
@@ -58,10 +48,10 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: portfolioData.meta.siteTitle,
-    description: portfolioData.meta.siteDescription,
-    images: [`https://sanjei2002.github.io/portfolio/og-image.svg`],
-    creator: "@sanjeipranav",
+    title: meta.siteTitle,
+    description: meta.siteDescription,
+    images: [`${meta.siteUrl}/og-image.svg`],
+    creator: meta.twitterHandle || undefined,
   },
   
   // Robots
@@ -77,14 +67,9 @@ export const metadata: Metadata = {
     },
   },
   
-  // Verification (add your verification codes when you have them)
-  // verification: {
-  //   google: "your-google-verification-code",
-  // },
-  
   // Canonical URL
   alternates: {
-    canonical: "https://sanjei2002.github.io/portfolio",
+    canonical: meta.siteUrl,
   },
   
   // Category
