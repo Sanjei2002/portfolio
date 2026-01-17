@@ -103,7 +103,7 @@ portfolio/
   },
   "socials": {
     "github": "https://github.com/yourusername",
-    "linkedin": "https://linkedin.com/in/yourprofile",
+    "linkedin": "https://www.linkedin.com/in/your-profile",
     "twitter": null,
     "website": null
   },
