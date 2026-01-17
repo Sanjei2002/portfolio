@@ -84,6 +84,9 @@ export interface Project {
 export interface Meta {
   siteTitle: string;
   siteDescription: string;
+  siteUrl: string;
+  keywords: string[];
+  twitterHandle: string | null;
 }
 
 export interface PortfolioData {
